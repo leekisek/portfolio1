@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+.row {
+    width: 1200px;
+    height: 100%;
+}
+
+.cf::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#container .header {
+    position: relative;
+}
+
+/* inner 구역 */
+
+#container .header .inner {
+    margin: 0 auto;
+    text-align: right;
+    height: 100%;
+}
+
+#container .header .inner a {
+    float: right;
+    padding: 15px;
+    font-size: 12px;
+    color: white;
+    transition: all 0.4s;
+}
+
+#container .header .inner a:hover {
+    color: #A6B8C4;
+}
+
+
+/* nav 구역 */
+
+#container .header nav {
+    color: white;
+    margin: 0 auto;
+    height: 100px;
+    position: relative;
+    top: 0;
+}
+
+.header nav h1 {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.header nav h1 img {
+    width: 188px;
+    height: 28px;
+}
+
+.header nav .depth1 {
+    float: right;
+}
+
+.header nav .depth1>li {
+    float: left;
+    padding: 25px 20px;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header nav .depth1 li .depth2 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 15px;
+    margin-top: 25px;
+    display: none;
+    transition: all 0.4s;
+}
+
+.header nav .depth1 li:hover .depth2 {
+    display: block;
+    cursor: pointer;
+}
+
+
+.header nav .depth1 li .depth2 li {
+    padding: 13px 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: all 0.4s
+}
+
+.header nav .depth1 li .depth2 li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* slideimg 구역 */
+
+.slideimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.slideimg img {
+    display: none;
+}
+
+.slideimg img.on {
+    display: block;
+}
+
+/* arrow 구역 */
+
+
+.arrow>.right {
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.arrow>.left {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+/*  circle 구역 */
+
+.circle {
+    position: absolute;
+    bottom : 12%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.circle span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+}
