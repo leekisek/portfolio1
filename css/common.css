@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 .row {
-    width: 1200px;
-    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .cf::after {
@@ -12,7 +12,12 @@
 }
 
 #container .header {
-    position: relative;
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
 }
 
 /* inner 구역 */
@@ -24,7 +29,8 @@
 }
 
 #container .header .inner a {
-    float: right;
+
+    display: inline-block;
     padding: 15px;
     font-size: 12px;
     color: white;
@@ -36,34 +42,34 @@
 }
 
 
-/* nav 구역 */
+/* topbar 구역 */
 
-#container .header nav {
+#container .header .topbar_bg {
+    width: 100%;
+}
+
+#container .header .topbar_bg .topbar {
     color: white;
     margin: 0 auto;
-    height: 100px;
-    position: relative;
-    top: 0;
+    height: 80px;
 }
 
-.header nav h1 {
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 40%;
-    transform: translateY(-50%);
+.header .topbar_bg .topbar h1 {
+    float: left;
+    padding: 25px 20px;
 }
 
-.header nav h1 img {
+.header .topbar_bg .topbar h1 img {
     width: 188px;
     height: 28px;
 }
 
-.header nav .depth1 {
+.header .topbar_bg .topbar .depth1 {
     float: right;
+
 }
 
-.header nav .depth1>li {
+.header .topbar_bg .topbar .depth1>li {
     float: left;
     padding: 25px 20px;
     font-size: 20px;
@@ -72,7 +78,8 @@
     cursor: pointer;
 }
 
-.header nav .depth1 li .depth2 {
+.header .topbar_bg .topbar .depth1 li .depth2 {
+
     position: absolute;
     top: 100%;
     left: 0;
@@ -80,37 +87,34 @@
     width: 100%;
     height: 100%;
     color: white;
-    font-size: 15px;
-    margin-top: 25px;
+    font-size: 14px;
+    padding-top: 45px;
     display: none;
     transition: all 0.4s;
 }
 
-.header nav .depth1 li:hover .depth2 {
+.header .topbar_bg .topbar .depth1 li:hover .depth2 {
     display: block;
     cursor: pointer;
 }
 
 
-.header nav .depth1 li .depth2 li {
+.header .topbar_bg .topbar .depth1 li .depth2 li {
     padding: 13px 0;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     color: white;
-    transition: all 0.4s
+    transition: all 0.3s
 }
 
-.header nav .depth1 li .depth2 li:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+.header .topbar_bg .topbar .depth1 li .depth2 li:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 17px;
 }
+
 
 /* slideimg 구역 */
 
-.slideimg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
 
 .slideimg img {
     display: none;
@@ -145,9 +149,9 @@
 
 .circle {
     position: absolute;
-    bottom : 12%;
+    bottom: 12%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 .circle span {
@@ -156,4 +160,364 @@
     height: 15px;
     border-radius: 50%;
     background-color: white;
+}
+
+/* maintxt */
+
+.maingtxt {
+    position: relative;
+}
+
+.maintxt>img {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* section article1  */
+
+
+.section .article1 {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.section .article1>.call,
+.location,
+.reservation {
+    float: left;
+    width: 28%;
+    margin: 0 2%;
+    height: 280px;
+    position: relative;
+}
+
+.section .article1 a {
+    display: block;
+    height: 100%;
+    padding: 60px 0;
+    line-height: 40px;
+    transition: all 0.5s;
+    font-size: 14px;
+
+}
+
+.section .article1 a:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.section .article1 a>p:nth-child(2) {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.section .article1 a img {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+
+/*  section article2 */
+
+.section .article2 {
+    margin-top: 200px;
+    text-align: center;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+
+.section .article2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.76);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.section .article2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: url(../img/around1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.section .article2 .mtxt {
+    line-height: 30px;
+    padding-bottom: 50px;
+    color: white;
+}
+
+.mtxt h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 40px 0;
+}
+
+.mtxt p {
+    font-size: 14px;
+}
+
+.article2 .imgbox {
+    z-index: 99;
+    position: relative;
+}
+
+.article2 .imgbox .imgs {
+    display: none;
+}
+
+.article2 .imgbox .imgs.on2 {
+    display: block;
+}
+
+.article2 .imgbox .vmore {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: black;
+    color: white;
+    width: 160px;
+    height: 50px;
+    font-size: 14px;
+    transition: all 0.6s;
+}
+
+.article2 .imgbox .vmore:hover {
+    background-color: white;
+    color: black;
+}
+
+.article2 .imgbox .vmore>a {
+    display: block;
+    padding: 18px 0;
+
+}
+
+/* section article3 roomtxt구역 */
+
+.article3 {
+    margin-top: 200px;
+
+}
+
+.article3 .row {
+    overflow: hidden;
+}
+
+.article3 .roomtxt {
+    float: left;
+    width: 30%;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.article3 .roomtxt h2 {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px 0;
+    line-height: 30px;
+}
+
+.article3 .roomtxt h2 span {
+    display: inline-block;
+    padding: 15px 0;
+}
+
+.article3 .roomtxt p:nth-of-type(1) {
+    display: inline-block;
+    font-size: 25px;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.article3 .roomtxt .slidebtn {
+    margin: 15px 0;
+}
+
+.article3 .roomtxt .slidebtn a {
+    display: inline-block;
+    width: 60px;
+    height: 3px;
+    background-color: rgb(156, 154, 154);
+    transition: all 0.5s;
+}
+
+.article3 .roomtxt .slidebtn a:hover {
+    background-color: black;
+}
+
+.article3 .roomtxt .vmor2 {
+    margin-top: 30px;
+    width: 190px;
+    height: 50px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+
+.article3 .roomtxt .vmor2 a {
+    display: block;
+    padding: 11px 0;
+    transition: all 0.4s;
+}
+
+.article3 .roomtxt .vmor2 a:hover {
+    background-color: lightgray;
+    color: black;
+    transform: translate(5px, -5px);
+}
+
+/* section article3 imgbox2 구역*/
+
+
+.article3 .imgbox2 {
+    float: right;
+    width: 65%;
+    padding-top: 35px;
+}
+
+.article3 .imgbox2 img {
+    display: none;
+}
+
+.article3 .imgbox2 img.on3 {
+    display: block
+}
+
+/* section article4 구역 */
+
+.article4 {
+    text-align: center;
+    margin-top: 200px;
+    width: 100%;
+    height: 840px;
+    background-image: url(../img/service_back.jpg);
+}
+
+.article4 .toptxt h2 {
+    text-align: center;
+}
+
+.article4 h2 {
+    font-size: 2rem;
+    padding: 90px 0;
+    color: white;
+
+}
+
+.article4 .imgbox3 .serv {
+    padding-top: 15px;
+    margin: 20px 2.5%;
+    float: left;
+    width: 28%;
+    height: 250px;
+    /* border: 1px solid white; */
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+.article4 .imgbox3 .serv:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translate(-10px, -10px);
+    cursor: pointer;
+}
+
+.article4 .imgbox3 .serv>img {
+    width: 60px;
+    height: 60px;
+}
+
+.article4 .imgbox3 .serv h3 {
+    padding: 30px 0;
+}
+
+/* section article5 */
+
+.article5 {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.article5 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.article5 .gimgbox {
+    padding: 80px;
+    position: relative;
+}
+
+.article5 .gimgbox .img111 {
+    float: left;
+    width: 33.33%;
+    transition: all 0.5s;
+}
+
+.article5 .gimgbox .img111:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: scale(1.1);
+
+}
+
+/* footer 구역 */
+
+.footer {
+    text-align: center;
+    margin-top: 200px;
+    color: white;
+    background-color: black;
+    font-size: 13px;
+}
+
+.footer .row .bnav li {
+    padding: 15px 25px;
+    display: inline-block;
+    transition: all 0.4s;
+}
+
+.footer .row .bnav li:hover {
+    color:#A6B8C4;
+}
+
+.footer .last {
+    background-color: rgb(75, 75, 75);
+    line-height: 25px;
+}
+
+.footer .last div{
+    float:left;
+    width: 33.33%;
+    padding: 30px 0;
+}
+
+.footer .last p {
+    text-align: left;
+}
+
+.sns img {
+    transition: all 0.5s;
+}
+
+.sns img:hover  {
+    transform: scale(1.2);
+
 }
