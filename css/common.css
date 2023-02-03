@@ -59,8 +59,27 @@
     padding: 25px 20px;
 }
 
+.header .topbar_bg .topbar .bars{
+    display: none;
+
+}
+
+.header .topbar_bg .topbar .xmark {
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 35px;
+    padding: 25px 20px;
+    display: none;
+
+}
+
+
 .header .topbar_bg .topbar h1 img {
-    width: 188px;
+    float:left;
+    width: 180px;
     height: 28px;
 }
 
@@ -90,27 +109,27 @@
     font-size: 14px;
     padding-top: 45px;
     display: none;
-    transition: all 0.4s;
+    /* transition: all 0.4s; */
 }
 
-.header .topbar_bg .topbar .depth1 li:hover .depth2 {
+/* .header .topbar_bg .topbar .depth1 li:hover .depth2 {
     display: block;
     cursor: pointer;
-}
+} */
 
 
 .header .topbar_bg .topbar .depth1 li .depth2 li {
     padding: 13px 0;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
-    transition: all 0.3s
+    /* transition: all 0.3s */
 }
 
-.header .topbar_bg .topbar .depth1 li .depth2 li:hover {
+/* .header .topbar_bg .topbar .depth1 li .depth2 li {
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     font-size: 17px;
-}
+} */
 
 
 /* slideimg 구역 */
@@ -520,4 +539,8 @@
 .sns img:hover  {
     transform: scale(1.2);
 
+}
+
+.header .topbar_bg .topbar .depth1 li .icon{
+    display:none;
 }
