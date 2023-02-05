@@ -1,12 +1,8 @@
-
-
-
-let ww = $(window).width()
-
+var ww = $(window).width()
 if (ww > 1024) {
     $('html').addClass('pc')
 } else {
-    $('html').addClass('moblie')
+    $('html').addClass('mobile')
 }
 
 $('.header .topbar_bg .topbar .depth1>li').on('mouseover mouseout', function(){
@@ -28,22 +24,16 @@ $('.header .xmark').on('click', function () {
 //-------------------------------------------------------------
 
 
-$('.header .depth1 > li > .icon').on('click', function () {
+$('.header .topbar_bg .topbar .depth1 > li > .icon').on('click', function() {
     if ($('html').hasClass('mobile')) {
-
-        if ( $(this).find('i').hasClass('fa-solid fa-chevron-down') ) {
-
+        if ( $(this).find('i').hasClass('fa-chevron-down') ) {
             $(this).next().stop().slideDown()
-            $(this).find('i').removeClass('fa-solid fa-chevron-down')
-            .addClass('fa-solid fa-chevron-up')
-
+            $(this).find('i').removeClass('fa-chevron-down')
+            .addClass('fa-chevron-up')
         } else {
             $(this).next().stop().slideUp()
-            $(this).find('i').removeClass('fa-solid fa-chevron-up')
-            .addClass('fa-solid fa-chevron-down')
-
-
-            return false
+            $(this).find('i').removeClass('fa-chevron-up')
+            .addClass('fa-chevron-down')
         }
     }
 })
