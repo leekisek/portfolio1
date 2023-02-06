@@ -86,26 +86,6 @@
 
     }
 
-    .arrow>.right {
-        display: none;
-        color: white;
-        position: absolute;
-        top: 50%;
-        right: 2%;
-        transform: translate(-50%, -50%);
-        font-size: 50px;
-    }
-    
-    .arrow>.left {
-        display: none;
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        transform: translate(-50%, -50%);
-        font-size: 50px;
-    }
-
 
 }
 
@@ -116,6 +96,10 @@
 
     #container .header .inner {
      display:none;
+    }
+
+    .arrow {
+        font-size : 35px;
     }
 
     .header .topbar_bg .topbar .bars {
@@ -147,9 +131,46 @@
         display:block;
         position:absolute; right:60px;
         top:25px;
-         width:30px; height:30px; 
-         z-index:9999;
+        width:30px; height:30px; 
+        z-index:9999;
     }
+
+    .slick-arrow {
+        font-size : 35px;
+    }
+
+    .slick-prev {
+        left: 20px;
+        z-index : 9999;
+    }
+    
+    .slick-next { 
+        right: 20px;
+    }
+
+
+}
+
+@media screen and (max-width : 480px) {
+
+    .header .topbar_bg .topbar .depth1 > li {
+        font-size: 13px;
+    }
+
+    .header .topbar_bg .topbar .depth1 > li > .depth2 {
+        font-size : 10px;
+    } 
+
+    .header .topbar_bg .topbar .depth1 > li > .icon{
+        display:block;
+        position:absolute; right: 6%;
+        top:25px;
+        width:30px; height:30px; 
+        z-index:9999;
+    }
+
+
+
 
 
 }

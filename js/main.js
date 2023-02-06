@@ -38,3 +38,13 @@ $('.header .topbar_bg .topbar .depth1 > li > .icon').on('click', function() {
     }
 })
 
+//---------------------------------------------------------------------------
+
+$('.slideimg').slick({
+    autoplay : true,
+    autoSpeed : 3000,
+    arrows : true,
+    dots : true,
+    prevArrow : '<button class="slick-arrow slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+    nextArrow : '<button class="slick-arrow slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+})
