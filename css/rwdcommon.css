@@ -107,7 +107,6 @@
     }
     
     .article3 .roomtxt .vmor2 {
-        float : right;
         position : absolute;
         right: 0;
         bottom: 15px;
@@ -268,6 +267,46 @@
     font-size : 0.5rem;
 }
 
+.article3 .roomtxt {
+    width: 100%;
+    text-align: justify;
+    line-height: 30px;
+    position:relative;
 
+}
+
+.article3 .roomtxt h2 {
+    font-size : 30px;
+}
+
+.article3 .roomtxt p:first-of-type {
+    font-size : 17px;
+}
+
+.article3 .roomtxt p:last-of-type {
+    font-size : 12px;
+}
+
+.article3 .roomtxt p:first-of-type { 
+    margin-bottom: 10px;
+
+}
+
+.article3 .roomtxt .vmor2 {
+    width: 120px;
+    height : 30px;
+}
+
+.article3 .roomtxt .vmor2 a {
+    display: inline-block;
+    padding-top : 0;
+    font-size : 13px;
+}
+
+   .article3 .roomtxt .slidebtn a {
+    display: inline-block;
+    width : 45px;
+    height : 2px;
+   }
 
 }
