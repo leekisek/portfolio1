@@ -48,3 +48,37 @@ $('.slideimg').slick({
     prevArrow : '<button class="slick-arrow slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
     nextArrow : '<button class="slick-arrow slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
 })
+
+$('.plpa i').on('click',function(){
+    if($(this).hasClass('fa-pause')) {
+        $('.slideimg').slick('slickPause')
+        $(this).removeClass('fa-pause').addClass('fa-play')
+    } else {
+        $('.slideimg').slick('slickPlay')
+        $(this).removeClass('fa-play').addClass('fa-pause')
+    }
+})
+
+$('.article3 .roomtxt .txt_group').slick({
+    autoplay : true,
+    dots: true, 
+    arrows: false,
+    pasueOnHover: true
+})
+
+
+$('.article3 .imgbox2').slick({
+    autoplay : true,
+    dots: true, 
+    arrows: false,
+    pasueOnHover: true
+})
+
+$('.article3 .slick-dots li').on('click',function(){
+    if ('.article3 .slick-dots li:nth-child(1)') {
+        $('.article3 .imgbox2').next('roomimg1 rimg').show()
+    } else {
+        $('.article3 .imgbox2').children().hide()
+    }
+})
+
