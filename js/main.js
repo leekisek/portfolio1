@@ -107,6 +107,11 @@ $('.header .topbar_bg .topbar .depth1 > li > .icon').on('click', function() {
             .addClass('fa-chevron-down')
         }
     }
+
+    
+    $(this).parent().siblings().find('.depth2').slideUp()
+    $(this).parent().siblings().find('i').removeClass('fa-chevron-up')
+    .addClass('fa-chevron-down')
 })
 
 //---------------------------------------------------------------------------
@@ -119,6 +124,10 @@ $('.slideimg').slick({
     prevArrow : '<button class="slick-arrow slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
     nextArrow : '<button class="slick-arrow slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
 })
+
+
+
+
 
 $('.plpa i').on('click',function(){
     if($(this).hasClass('fa-pause')) {
@@ -150,3 +159,45 @@ $('.article3 .imgbox2').slick({
 //         $('.article3 .imgbox2').next('roomimg1 rimg').show()
 //     }} )
 
+//------------------------------------------------------------------
+
+let article1Near = $('.article1').offset().top - $(window).height()/1.5
+let article2Near = $('.article2').offset().top - $(window).height()/1.5
+let article3Near = $('.article3').offset().top - $(window).height()/1.5
+let article4Near = $('.article4').offset().top - $(window).height()/1.5
+let article5Near = $('.article5').offset().top - $(window).height()/1.5
+
+
+$(window).on('scroll', function(){
+    let sct = $(this).scrollTop()
+    if (sct >= article1Near) {
+        $('.article1').addClass('on')
+    } else {
+        $('.article1').removeClass('on')
+    }
+
+    if (sct >= article2Near) {
+        $('.article2').addClass('on')
+    } else {
+        $('.article2').removeClass('on')
+    }
+
+    if (sct >= article3Near) {
+        $('.article3').addClass('on')
+    } else {
+        $('.article3').removeClass('on')
+    }
+
+    if (sct >= article4Near) {
+        $('.article4').addClass('on')
+    } else {
+        $('.article4').removeClass('on')
+    }
+
+    
+    if (sct >= article5Near) {
+        $('.article5').addClass('on')
+    } else {
+        $('.article5').removeClass('on')
+    }
+})

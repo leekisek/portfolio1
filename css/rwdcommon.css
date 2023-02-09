@@ -5,7 +5,7 @@
     /* header 구역 */
 
     #container .header {
-        position: static;
+        position: fixed;
     }
 
     .header .topbar_bg .topbar h1 {
@@ -129,7 +129,8 @@
     }
 
     .article3 .roomtxt h2 {
-        font-size: 30px;
+        font-size: 25px;
+        padding: 0;
     }
 
     .article3 .roomtxt p {
@@ -148,16 +149,21 @@
         bottom: -80px;
     }
 
+    .article3 .slick-dots {
+        width:100%;
+    }
+
+    .article3 .slick-dots li {
+        width: 45px;
+        top: 30px;
+        right: 23%;
+    }
 
     .article3 .imgbox2 {
 
         margin-bottom: 35px;
         padding-right: 10px;
     } 
-
-    .article3 .slick-dots li {
-        left : 30px;
-    }
 
     /* article5 구역  */
     .article5 .gimgbox {
@@ -180,7 +186,9 @@
 
     .arrow {
         font-size: 35px;
+
     }
+    
 
     .header .topbar_bg .topbar .bars {
         display: block;
@@ -232,51 +240,81 @@
 
     /* article3 구역 */
 
-    .article3 .roomtxt h2 {
-        font-size: 24px;
-        padding:0;
+
+    .article3 .roomtxt {
+        width: 100%;
+        padding-right: 10px;
+        text-align: justify;
+        line-height: 30px;
+        position: relative;
+
     }
 
-    .article3 .roomtxt h2 span {
-        padding: 5px 0;
+    .article3 .roomtxt h2 {
+
+        font-size: 25px;
+        padding: 0;
     }
 
     .article3 .roomtxt p {
-        font-size: 11px;
+        line-height: 18px;
         margin-bottom: 10px;
-        line-height: 12px;
     }
 
-    .article3 .slick-dots {
-        left: -45px;
-        bottom:-10px;
-      }
-    
-  
     .article3 .roomtxt p:first-of-type {
-        margin-bottom: 10px;
+        font-size: 17px;
+    }
+
+    .article3 .roomtxt p:last-of-type {
+        font-size: 12px;
+    }
+
+    .article3 .roomtxt p:first-of-type {
+        margin-bottom: 18px;
+
+
+    }
+
+    .article3 .slick-dots li {
+        top : 0;
+        left: 0;
+
 
     }
 
     .article3 .roomtxt .vmor2 {
-        position: absolute;
-        left: 10px;
-        bottom: -80px;
-        height: 45px;
+
+        position:absolute;
+        top:105%;
+        /* top:40%; */
+        /* margin-left: 230px;
+        margin-bottom: 20px; */
+        width: 120px;
+        height: 30px;
+        z-index:9;
     }
 
-
-
-    .article3 .imgbox2 {
-        padding-top : 50px;
-        margin-bottom: 25px;
-        padding-right: 10px;
-    } 
-
-    .article3 .slick-dots li {
-        /* left : 30px; */
+    .article3 .roomtxt .vmor2 a {
+        display: inline-block;
+        padding-top: 0;
+        font-size: 13px;
+        right : 0;
     }
 
+    .article3 .roomtxt .slidebtn a {
+        display: inline-block;
+        width: 45px;
+        height: 2px;
+    }
+
+    
+.article3 .imgbox2 {
+    float: right;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 10px;
+    z-index: -9;
+}
     /* footer 구역 */
 
     .footer .row .bnav {
@@ -309,6 +347,7 @@
 
 @media screen and (max-width : 480px) {
 
+    
     .header .topbar_bg .topbar .depth1>li {
         font-size: 13px;
     }
@@ -328,6 +367,12 @@
 
     }
 
+    .header .topbar_bg .topbar .xmark {
+        top: 80px;
+        right: 0;
+        font-size: 15px !important;
+    }
+
     .slick-arrow {
         font-size: 25px;
     }
@@ -335,14 +380,6 @@
 
     .maintxt img {
         width: 200px;
-    }
-
-    .slick-dots li {
-        width: 50px;
-    }
-
-    .slick-dots li button {
-        width: 50px;
     }
 
     /* article1 구역 */
@@ -381,6 +418,7 @@
 
     /* article3 구역 */
 
+
     .article3 .roomtxt {
         width: 100%;
         padding-right: 10px;
@@ -401,15 +439,6 @@
         margin-bottom: 10px;
     }
 
-    .article3 .slick-dots {
-        position:fixed
-      left: -180px;
-    }
-
-    .article3 .slick-dots li {
-        width: 45px;
-    }
-
     .article3 .roomtxt p:first-of-type {
         font-size: 17px;
     }
@@ -423,10 +452,18 @@
 
     }
 
+    .article3 .slick-dots li {
+        top : 10px;
+        left: 0;
+        
+
+    }
+
+
     .article3 .roomtxt .vmor2 {
 
         position:absolute;
-        top:100%;
+        top:102%;
         /* top:40%; */
         /* margin-left: 230px;
         margin-bottom: 20px; */
@@ -454,6 +491,7 @@
     width: 100%;
     padding-top: 20px;
     padding-left: 10px;
+    z-index: -9;
 }
 
     /* article4 구역 */
@@ -470,6 +508,11 @@
         font-size : 11px;
     }
 
+    .article4 .imgbox3 .serv img {
+        width: 50px;
+        height: 50px;
+    }
+
     /* footer 구역 */
 
     .footer .row .bnav {
@@ -480,7 +523,7 @@
     .footer .last div {
         float: none;
         width: 100%;
-        padding: 20px 0;
+        padding: 10px 0;
         font-size: 0.5rem;
     }
 
