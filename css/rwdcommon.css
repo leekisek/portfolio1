@@ -125,6 +125,7 @@
         line-height: 25px;
         position: relative;
         padding-left : 10px;
+        padding-bottom: 30px;
 
     }
 
@@ -160,9 +161,10 @@
     }
 
     .article3 .imgbox2 {
-
+        width: 100%;
         margin-bottom: 35px;
-        padding-right: 10px;
+        padding: 0 10px;
+        z-index: -1;
     } 
 
     /* article5 구역  */
@@ -242,8 +244,7 @@
 
 
     .article3 .roomtxt {
-        width: 100%;
-        padding-right: 10px;
+        /* padding-right: 10px; */
         text-align: justify;
         line-height: 30px;
         position: relative;
@@ -276,28 +277,26 @@
     }
 
     .article3 .slick-dots li {
-        top : 0;
-        left: 0;
+        top : 30px;
+        left: -35px;
 
 
     }
 
-    /* .article3 .roomtxt .vmor2 {
-        display: none;
-        position:absolute;
-        top:105%;
+    .article3 .vmor2 {
+        display: block;       
         /* top:40%; */
         /* margin-left: 230px;
         margin-bottom: 20px; */
         width: 120px;
-        height: 30px;
+        height: 40px;
         /* z-index:9; */
-    } */
+    }
 
-    .article3 .roomtxt .vmor2 a {
+    .article3 .vmor2 a {
         display: inline-block;
-        padding-top: 0;
-        font-size: 13px;
+        padding-bottom: 15px;
+        font-size: 16px;
         right : 0;
     }
 
@@ -339,6 +338,7 @@
         padding: 0 10px;
     }
 
+}
 
 
 
@@ -451,23 +451,25 @@
 
     }
 
+    .article3 .slick-dots {
+        width: 100%;
+    }
+
     .article3 .slick-dots li {
-        top : 10px;
+        top : 30px;
         left: 0;
+        width: 30px;
         
 
     }
 
 
-    .article3 .roomtxt .vmor2 {
-        display: none;
-        position:absolute;
-        top:102%;
+    .article3 .vmor2 {
         /* top:40%; */
         /* margin-left: 230px;
         margin-bottom: 20px; */
         width: 120px;
-        height: 30px;
+        height: 40px;
         /* z-index:9; */
     }
 
@@ -529,5 +531,4 @@
     .footer .row .bnav li {
         padding : 15px 10px;
     }
-
 }
