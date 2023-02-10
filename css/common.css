@@ -426,6 +426,7 @@
 
 }
 
+
 .article3 .roomtxt {
     padding-top: 35px;
     float: left;
@@ -513,7 +514,9 @@
     background-color: black;
 } */
 
-.article3 .roomtxt .vmor2 {
+.article3 .vmor2 {
+    position: absolute;
+    bottom:60px;
     margin-top: 15px;
     width: 185px;
     height: 40px;
@@ -522,15 +525,24 @@
     color: white;
     font-size: 14px;
     clear: both;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0s 0s;
 }
 
-.article3 .roomtxt .vmor2 a {
+.article3.on .vmor2 {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 2s 1s;
+}
+
+.article3 .vmor2 a {
     display: block;
-    padding: 6px 0;
-    transition: all 0.4s;
+    padding: 12px 0;
+    transition: all 0.5s;
 }
 
-.article3 .roomtxt .vmor2 a:hover {
+.article3 .vmor2 a:hover {
     background-color: lightgray;
     color: black;
     transform: translate(5px, -5px);
