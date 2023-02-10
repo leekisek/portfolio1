@@ -112,9 +112,13 @@
     padding: 13px 0;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
-    /* transition: all 0.3s */
+    transition: all 0.3s
 }
 
+.header .topbar_bg .topbar .depth1>li .depth2 li:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size : 16px;
+}
 /* slideimg 구역 */
 
 .scmwrap {
