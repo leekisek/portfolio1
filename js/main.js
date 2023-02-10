@@ -251,3 +251,6 @@ $(window).on('scroll', function () {
     }
 })
 
+$('html').animate({
+    scrollTop : 0
+},100)

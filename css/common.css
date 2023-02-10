@@ -236,7 +236,7 @@
 
 
 .section .article1 {
-    padding-top: 200px;
+    padding-top: 100px;
     text-align: center;
     overflow: hidden;
 }
@@ -661,12 +661,19 @@
     transition: all 2s 1s;
 }
 
-/* .article5 .gimgbox .img111 img:hover {
+.article5 .gimgbox .img111 img {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1);
+    transition : all 0.5s
+}
+
+.article5 .gimgbox .img111 img:hover {
     cursor: pointer;
     opacity: 0.7;
     transform: scale(1.5);
 
-} */
+}
 
 
 .article5 .gimgbox .img111:nth-child(1) {
