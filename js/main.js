@@ -187,6 +187,14 @@ $('.plpa i').on('click', function () {
         $(this).removeClass('fa-play').addClass('fa-pause')
     }
 })
+// ================================== Slick
+
+// $('.article3 .row .innerOuter').slick({
+//     // autoplay: true,
+//     dots: true,
+//     // arrows: false,
+//     // pasueOnHover: true
+// })
 
 $('.article3 .roomtxt .txt_group').slick({
     autoplay: true,
@@ -251,6 +259,3 @@ $(window).on('scroll', function () {
     }
 })
 
-$('html').animate({
-    scrollTop : 0
-},100)
