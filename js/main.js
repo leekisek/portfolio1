@@ -2,12 +2,13 @@
 
 
 
+
 var deviceSize = 1024
 function scrollOX(status) {
     $('html').css({
 
-        overflowY:status
-    })    
+        overflowY: status
+    })
 
     return $('html').width()
 }
@@ -16,27 +17,28 @@ function scrollOX(status) {
 // 스크롤바 넓이 17px을 deviceSize에서 빼야 함
 
 var scX = scrollOX('hidden')
-var scO =  scrollOX('scroll')
+var scO = scrollOX('scroll')
 var scD = scX - scO
 
 // 토글 디바이스툴바가 켜져 있으면 scX와 scO는 같은 값이 되므로
 // 아래 if 문을 들어가지 않아서 diviceSize는 원래 값임.
 
-if(scD>0) {
+if (scD > 0) {
 
-    deviceSize = deviceSize -scD
-    
-} 
+    deviceSize = deviceSize - scD
+
+}
 
 // pc화면용 네비게이션 액션
 
 
 
-$('#header #nav .depth1 > li').on('hover', function () {
-    if ($('html').hasClass('pc')) {
-        $(this).find('.depth2').stop().slideToggle()
-    }
-})
+// $('#header #nav .depth1 > li').on('hover', function () {
+//     if ($('html').hasClass('pc')) {
+//         $(this).find('.depth2').stop().slideToggle()
+//     }
+// })
+
 
 // $('#header #nav .depth1 > li').on('mouseover mouseout', function () {
 //     if ($('html').hasClass('pc')) {
@@ -59,17 +61,36 @@ $('#header #nav .depth1 > li').on('hover', function () {
 
 // init()
 
-$(window).on('resize', function () {
-    let ww = $(this).width()
-    if (ww > deviceSize) {
-        $('html').addClass('pc').removeClass('mobile')
-    } else {
-        $('html').addClass('mobile').removeClass('pc')
-    }
-})
+// $(window).on('resize', function () {
+//     let ww = $(this).width()
+//     if (ww > deviceSize) {
+//         $('html').addClass('pc').removeClass('mobile')
+//     } else {
+//         $('html').addClass('mobile').removeClass('pc')
+//     }
+// })
 
-$(window).on('resize',function(){
-    init()
+// $(window).on('resize',function(){
+//     init()
+// })
+
+
+var ww = $(window).width()
+if (ww > deviceSize) {
+    $('html').addClass('pc')
+} else {
+    $('html').addClass('mobile')
+}
+
+$(window).on('resize', function () {
+    let ww = $(window).width()
+    if (ww > deviceSize && !$('html').hasClass('pc')) {
+        $('html').addClass('pc').removeClass('mobile')
+        location.reload()
+    } else if (ww <= deviceSize && !$('html').hasClass('mobile')) {
+        $('html').addClass('mobile').removeClass('pc')
+        location.reload()
+    }
 })
 
 
@@ -84,20 +105,31 @@ $(window).on('resize',function(){
 //     }
 // })
 
+var ww = $(window).width()
+if (ww > 1024) {
+    $('html').addClass('pc')
+} else {
+    $('html').addClass('mobile')
+}
 
-
-// var ww = $(window).width()
-// if (ww > 1024) {
-//     $('html').addClass('pc')
-// } else {
-//     $('html').addClass('mobile')
-// }
-
-$('.header .topbar_bg .topbar .depth1>li').on('mouseover mouseout', function(){
-    if ( $('html').hasClass('pc') ) {
+$('#container .header .wrap .depth1>li').on('mouseover mouseout', function(){
+    if ($('html').hasClass('pc')) {
         $(this).find('.depth2').stop().slideToggle()
     }
 })
+
+// $('.header .topbar_bg .tobar .depth1 > li').on('mouseover', function(){
+//     if ( $('html').hasClass('pc') ) {
+//         $(this).find('.depth2').stop().slideDown()
+//     }
+// })
+
+// $('.header .topbar_bg .tobar .depth1 > li').on('mouseout', function(){
+//     if ( $('html').hasClass('pc') ) {
+//         $(this).find('.depth2').stop().slideUp()
+//     }
+// })
+
 
 //----------------------------------------------
 
@@ -112,42 +144,42 @@ $('.header .xmark').on('click', function () {
 //-------------------------------------------------------------
 
 
-$('.header .topbar_bg .topbar .depth1 > li > .icon').on('click', function() {
+$('.header .topbar_bg .topbar .depth1 > li > .icon').on('click', function () {
     if ($('html').hasClass('mobile')) {
-        if ( $(this).find('i').hasClass('fa-chevron-down') ) {
+        if ($(this).find('i').hasClass('fa-chevron-down')) {
             $(this).next().stop().slideDown()
             $(this).find('i').removeClass('fa-chevron-down')
-            .addClass('fa-chevron-up')
+                .addClass('fa-chevron-up')
         } else {
             $(this).next().stop().slideUp()
             $(this).find('i').removeClass('fa-chevron-up')
-            .addClass('fa-chevron-down')
+                .addClass('fa-chevron-down')
         }
     }
 
-    
+
     $(this).parent().siblings().find('.depth2').slideUp()
     $(this).parent().siblings().find('i').removeClass('fa-chevron-up')
-    .addClass('fa-chevron-down')
+        .addClass('fa-chevron-down')
 })
 
 //---------------------------------------------------------------------------
 
 $('.slideimg').slick({
-    autoplay : true,
-    autoSpeed : 3000,
-    arrows : true,
-    dots : true,
-    prevArrow : '<button class="slick-arrow slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
-    nextArrow : '<button class="slick-arrow slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+    autoplay: true,
+    autoSpeed: 3000,
+    arrows: true,
+    dots: true,
+    prevArrow: '<button class="slick-arrow slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+    nextArrow: '<button class="slick-arrow slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
 })
 
 
 
 
 
-$('.plpa i').on('click',function(){
-    if($(this).hasClass('fa-pause')) {
+$('.plpa i').on('click', function () {
+    if ($(this).hasClass('fa-pause')) {
         $('.slideimg').slick('slickPause')
         $(this).removeClass('fa-pause').addClass('fa-play')
     } else {
@@ -157,16 +189,16 @@ $('.plpa i').on('click',function(){
 })
 
 $('.article3 .roomtxt .txt_group').slick({
-    autoplay : true,
-    dots: true, 
+    autoplay: true,
+    dots: true,
     arrows: false,
     pasueOnHover: true
 })
 
 
 $('.article3 .imgbox2').slick({
-    autoplay : true,
-    dots: false, 
+    autoplay: true,
+    dots: false,
     arrows: false,
     pasueOnHover: true
 })
@@ -178,14 +210,14 @@ $('.article3 .imgbox2').slick({
 
 //------------------------------------------------------------------
 
-let article1Near = $('.article1').offset().top - $(window).height()/1.5
-let article2Near = $('.article2').offset().top - $(window).height()/1.5
-let article3Near = $('.article3').offset().top - $(window).height()/2
-let article4Near = $('.article4').offset().top - $(window).height()/2
-let article5Near = $('.article5').offset().top - $(window).height()/1.5
+let article1Near = $('.article1').offset().top - $(window).height() / 1.5
+let article2Near = $('.article2').offset().top - $(window).height() / 1.5
+let article3Near = $('.article3').offset().top - $(window).height() / 2
+let article4Near = $('.article4').offset().top - $(window).height() / 2
+let article5Near = $('.article5').offset().top - $(window).height() / 1.5
 
 
-$(window).on('scroll', function(){
+$(window).on('scroll', function () {
     let sct = $(this).scrollTop()
     if (sct >= article1Near) {
         $('.article1').addClass('on')
@@ -211,7 +243,7 @@ $(window).on('scroll', function(){
         $('.article4').removeClass('on')
     }
 
-    
+
     if (sct >= article5Near) {
         $('.article5').addClass('on')
     } else {
