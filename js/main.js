@@ -27,13 +27,13 @@ $(window).on('load', function(){
     if ( objString ) {
         const obj = JSON.parse(objString) 
         if (Date.now()>obj.expire) {
-            $('.popup').addClass('ons')
+            $('.popup').addClass('on')
             localStorage.removeItem('objkey')
         } else {
-            $('popup').removeClass('ons')
+            $('.popup').removeClass('on')
         }
     } else {
-        $('.popup').addClass('ons')
+        $('.popup').addClass('on')
     }
 })
 
@@ -293,7 +293,7 @@ $('.close button').on('click', function(){
         }
         localStorage.setItem('objkey', JSON.stringify(obj))
     }
-    $('.popup').removeClass('ons')
+    $('.popup').removeClass('on')
 })
 
 /* article5 구역 모달창에서 크게 보기 */
