@@ -24,7 +24,7 @@
 }
 
 #container .header .row {
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 /* inner 구역 */
@@ -423,52 +423,45 @@
 .article3 .row {
     overflow: hidden;
     position: relative;
-
-}
-
-
-.article3 .roomtxt {
-    padding-top: 35px;
-    float: left;
-    width: 30%;
-    text-align: justify;
-    line-height: 30px;
-    transform: translateX(-100%);
+    transform: translateX(-200%);
     opacity: 0;
-    transition: all 0s 0s;
+    transition : all 2s;
 }
 
-.article3.on .roomtxt {
+.article3.on .row {
     transform: translateX(0);
     opacity: 1;
-    transition: all 1.5s 0.3s;
 }
 
+.article3 .first, .second, .third {
+    padding-top: 35px;
+    text-align: justify;
+    line-height: 30px;
+}
 
-.article3 .roomtxt h2 {
+.article3 h2 {
     font-size: 40px;
     font-weight: bold;
-    padding: 20px 0;
-    line-height: 15px;
-}
-
-.article3 .roomtxt h2 span {
-    display: inline-block;
     padding: 15px 0;
 }
 
-.article3 .roomtxt p:nth-of-type(1) {
+.article3 p:nth-of-type(1) {
     display: inline-block;
     font-size: 25px;
     padding: 10px 0;
     border-bottom: 1px solid black;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.article3 p:nth-of-type(2) {
+    padding-bottom : 10px;
 }
 
 .article3 .slick-dots {
 
     position: absolute;
-    bottom: 0;
+    bottom: 15px;
+    right: 50%;
     /* text-align: center; */
     width: 100%;
 }
@@ -479,13 +472,13 @@
     display: inline-block;
     margin: 0 5px;
     position: relative;
-    top: 15px;
-    right: 25%;
+    top: 50%;
+    left: 50%;
     /* top: 45px; */
     /* right:90px; */
     width: 55px;
     border-radius: 30px;
-    height: 2px;
+    height: 4px;
 }
 
 .article3 .slick-dots li button {
@@ -494,25 +487,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #1d1d1d;
+    background-color: rgb(255, 255, 255);
 }
 
-
-/* .article3 .roomtxt .slidebtn {
-    margin: 15px 0;
-}
-
-.article3 .roomtxt .slidebtn a {
-    display: inline-block;
-    width: 60px;
-    height: 3px;
-    background-color: rgb(156, 154, 154);
-    transition: all 0.5s;
-}
-
-.article3 .roomtxt .slidebtn a:hover {
-    background-color: black;
-} */
+/* vmor2 구역 */
 
 .article3 .vmor2 {
     position: absolute;
@@ -525,7 +503,7 @@
     color: white;
     font-size: 14px;
     clear: both;
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
     opacity: 0;
     transition: all 0s 0s;
 }
@@ -533,7 +511,7 @@
 .article3.on .vmor2 {
     transform: translateX(0);
     opacity: 1;
-    transition: all 2s 1s;
+    transition: all 2s 1.5s;
 }
 
 .article3 .vmor2 a {
@@ -552,27 +530,24 @@
 
 
 .article3 .imgbox2 {
-    float: right;
-    width: 65%;
+    /* float: right;
+    width: 65%; */
     padding-top: 35px;
-    transform: translateX(100%);
+    /* transform: translateX(100%);
     opacity: 0;
-    transition: all 0s 0s;
+    transition: all 0s 0s; */
 }
 
-.article3.on .imgbox2 {
+.article3 .imgbox2 .rimg {
+    float : left;
+}
+
+/* .article3.on .imgbox2 {
     transform: translateX(0);
     opacity: 1;
     transition: all 1.5s 0.3s;
-}
-
-/* .article3 .imgbox2 img {
-    display: none;
-}
-
-.article3 .imgbox2 img.on3 {
-    display: block
 } */
+
 
 /* section article4 구역 */
 
@@ -790,3 +765,108 @@
 .header .topbar_bg .topbar .depth1 li .icon {
     display: none;
 }
+
+/* introAni 구역 */
+
+.introAni {
+    display: none;
+    /* display:flex; */
+    position : fixed;
+    top : 0;
+    left:0;
+    bottom:0;
+    width:100%;
+    background-color: #000;
+    color: white;
+    flex-direction: column;
+    z-index: 9999999;
+    font-size:  55px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.introAni.on {
+    display:flex;
+}
+
+
+.introAni div:first-child {
+
+    animation: intro 1s infinite
+
+}
+
+@keyframes intro {
+
+    0% {
+        opacity: 0;
+    }
+
+    50%  {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+/* 팝업창 */
+
+.popup {
+    border : 1px solid #dcdcdc;
+    position : fixed;
+    top : 200px;
+    left: 300px;
+    width: 350px;
+    height : 250px;
+    color : white;
+    z-index: 999999;
+    padding: 25px;
+    background-image: url('../img/89892631_gal1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    
+}
+
+.popup.on {
+    display : block;
+}
+
+.popup .ptxt {
+    line-height: 25px ;
+    text-align: justify;
+}
+
+.popup input {
+    border-radius: 50px;
+    margin-left : 5px;
+    width : 15px;
+    height: 15px;
+}
+
+.popup .close { 
+    position : absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.popup .close button {
+    background-color: rgb(238, 237, 237);
+    position : absolute;
+    right: 5px;
+    top : 50%;
+    transform: translateY(-50%);
+    border : none;
+    margin-right : 20px;
+    font-weight: bold;
+}
+

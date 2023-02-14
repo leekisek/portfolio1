@@ -1,7 +1,47 @@
 
+// introAni
+
+
+$(window).on('load', function(){
+    
+    if (!sessionStorage.getItem('refresh') ) {
+        sessionStorage.setItem('refresh', 'yes')
+        $('.introAni').addClass('on')
+        let count = 0;
+        let timer = setInterval(add, 25)
+        function add() {
+            count++
+            if (count>=100) { 
+                clearInterval(timer) 
+                $('.introAni').animate({
+                    left:'-100%;'
+                }, 500, function(){
+                    $(this).removeClass('on')
+                })
+            }
+            $('.introAni div').eq(1).text(count+'%')
+        }
+    } 
+
+    let objString = localStorage.getItem('objkey')
+    if ( objString ) {
+        const obj = JSON.parse(objString) 
+        if (Date.now()>obj.expire) {
+            $('.popup').addClass('ons')
+            localStorage.removeItem('objkey')
+        } else {
+            $('popup').removeClass('ons')
+        }
+    } else {
+        $('.popup').addClass('ons')
+    }
+})
 
 
 
+
+
+//--------------------------------------------
 
 var deviceSize = 1024
 function scrollOX(status) {
@@ -112,7 +152,7 @@ if (ww > 1024) {
     $('html').addClass('mobile')
 }
 
-$('#container .header .wrap .depth1>li').on('mouseover mouseout', function(){
+$('#container .header .wrap .depth1>li').on('mouseover mouseout', function () {
     if ($('html').hasClass('pc')) {
         $(this).find('.depth2').stop().slideToggle()
     }
@@ -172,10 +212,8 @@ $('.slideimg').slick({
     dots: true,
     prevArrow: '<button class="slick-arrow slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
     nextArrow: '<button class="slick-arrow slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+    pauseOnFoucus : false
 })
-
-
-
 
 
 $('.plpa i').on('click', function () {
@@ -189,26 +227,13 @@ $('.plpa i').on('click', function () {
 })
 // ================================== Slick
 
-// $('.article3 .row .innerOuter').slick({
-//     // autoplay: true,
-//     dots: true,
-//     // arrows: false,
-//     // pasueOnHover: true
-// })
 
-$('.article3 .roomtxt .txt_group').slick({
+$('.article3 .row').slick({
     autoplay: true,
     dots: true,
     arrows: false,
-    pasueOnHover: true
-})
-
-
-$('.article3 .imgbox2').slick({
-    autoplay: true,
-    dots: false,
-    arrows: false,
-    pasueOnHover: true
+    pasueOnHover: true,
+    pauseOnFoucus : false
 })
 
 // $('.article3 .slick-dots li').on('click',function(){
@@ -222,7 +247,7 @@ let article1Near = $('.article1').offset().top - $(window).height() / 1.5
 let article2Near = $('.article2').offset().top - $(window).height() / 1.5
 let article3Near = $('.article3').offset().top - $(window).height() / 2
 let article4Near = $('.article4').offset().top - $(window).height() / 2
-let article5Near = $('.article5').offset().top - $(window).height() / 1.5
+let article5Near = $('.article5').offset().top - $(window).height() / 1.7
 
 
 $(window).on('scroll', function () {
@@ -259,3 +284,65 @@ $(window).on('scroll', function () {
     }
 })
 
+$('.close button').on('click', function(){
+    if($(this).prev().prop('checked')) {
+        let tts = Date.now() + 1000
+        const obj = {
+            check : 'yes',
+            expire :tts
+        }
+        localStorage.setItem('objkey', JSON.stringify(obj))
+    }
+    $('.popup').removeClass('ons')
+})
+
+/* article5 구역 모달창에서 크게 보기 */
+
+$('.article5 .gimgbox .img111 img').on('click', function(){
+    // let href = $(this).attr('href')
+    let src = $(this).attr('src')
+    let modal = `<div class="modal">`
+    modal += `<div class="imgbox">`
+    // modal += `<a href="${href}" target="_blank">` 
+    modal += `<img src="${src}" alt="">`
+    modal += `<button type="button">닫기</button>`
+    modal += `</div>`
+    modal += `</div>`
+    $('body').append(modal)
+    $('.modal').css({
+        position:'fixed',
+        top:0,
+        left:0,
+        width:'100%',
+        height:'100%',
+        background:'rgba(0,0,0,0.5)'
+    })
+    $('.imgbox').css({
+        position:'absolute',
+        width:'700px',
+        top:'50%',
+        left:'50%',
+        transform:'translate(-50%, -50%)'
+    })
+    $('.imgbox button').css({
+        position:'absolute',
+        top:'0',
+        right:'0',
+        background:'rgba(0,0,0,0.5)',
+        color:'#fff',
+        padding:'5px 10px'
+    })
+
+    return false
+
+})
+
+$('body').on('click','.modal button', function(){
+    $('.modal').hide()
+    return false;
+})
+
+
+// $('body').on('click', '.modal img', function(e){
+//     e.stopPropagation()
+// })
