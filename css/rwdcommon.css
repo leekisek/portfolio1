@@ -114,12 +114,13 @@
     /*  article3 구역 */
 
 
-    /* .article3 .row {
+    .article3 .row {
         padding: 0 15px;
         text-align: center;
-    } */
+        position :relative;
+    }
 
-    .article3 .roomtxt {
+    /* .article3 .roomtxt {
         width: 100%;
         text-align: justify;
         line-height: 25px;
@@ -129,28 +130,13 @@
 
     }
 
-    .article3 .roomtxt h2 {
-        font-size: 25px;
-        padding: 0;
-    }
-
-    .article3 .roomtxt p {
-        font-size: 13px;
-    }
-    
-  
-    .article3 .roomtxt p:first-of-type {
-        margin-bottom: 10px;
-
-    }
-
     .article3 .vmor2 {
         position: absolute;
         left: 10px;
         bottom: 130px;
     }
 
-    .article3 .slick-dots {
+     .article3 .slick-dots {
         width:30%;
     }
 
@@ -158,7 +144,7 @@
         width: 45px;
         top: 20px;
         right: 24%;
-    }
+    } 
 
     .article3 .imgbox2 {
         width: 100%;
@@ -168,8 +154,17 @@
     } 
 
     /* article5 구역  */
+
+
     .article5 .gimgbox {
         padding: 20px;
+    }
+
+    
+    .article3 .slick-dots {
+        position: absolute;
+        bottom: 50px;
+
     }
 
 
@@ -251,34 +246,24 @@
 
     }
 
-    .article3 .roomtxt h2 {
+    .article3 h2 {
 
-        font-size: 25px;
+        font-size: 22px;
         padding: 0;
     }
 
-    .article3 .roomtxt p {
-        line-height: 18px;
+    .article3 p {
+        line-height: 25px;
+        font-size: 16px !important;
         margin-bottom: 10px;
     }
 
-    .article3 .roomtxt p:first-of-type {
-        font-size: 17px;
-    }
-
-    .article3 .roomtxt p:last-of-type {
-        font-size: 12px;
-    }
-
-    .article3 .roomtxt p:first-of-type {
-        margin-bottom: 18px;
 
 
     }
 
-    .article3 .slick-dots li {
-        top : 30px;
-        left: -35px;
+    .article3 .slick-dots {
+        bottom : 15px;
 
 
     }
@@ -338,7 +323,6 @@
         padding: 0 10px;
     }
 
-}
 
 
 
@@ -427,42 +411,22 @@
 
     }
 
-    .article3 .roomtxt h2 {
+    .article3 h2 {
 
-        font-size: 25px;
+        font-size: 15px !important;
         padding: 0;
     }
 
-    .article3 .roomtxt p {
+    .article3 p {
         line-height: 18px;
         margin-bottom: 10px;
-    }
-
-    .article3 .roomtxt p:first-of-type {
-        font-size: 17px;
-    }
-
-    .article3 .roomtxt p:last-of-type {
-        font-size: 12px;
-    }
-
-    .article3 .roomtxt p:first-of-type {
-        margin-bottom: 18px;
-
+        font-size: 10px !important;
     }
 
     .article3 .slick-dots {
-        width: 100%;
+        position : absolute;
+        bottoM : 2px;
     }
-
-    .article3 .slick-dots li {
-        top : 30px;
-        left: 0;
-        width: 30px;
-        
-
-    }
-
 
     .article3 .vmor2 {
         /* top:40%; */

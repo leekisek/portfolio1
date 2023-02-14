@@ -317,14 +317,14 @@ $('.article5 .gimgbox .img111 img').on('click', function(){
         height:'100%',
         background:'rgba(0,0,0,0.5)'
     })
-    $('.imgbox').css({
+    $('.modal .imgbox').css({
         position:'absolute',
         width:'700px',
         top:'50%',
         left:'50%',
         transform:'translate(-50%, -50%)'
     })
-    $('.imgbox button').css({
+    $('.modal .imgbox button').css({
         position:'absolute',
         top:'0',
         right:'0',
