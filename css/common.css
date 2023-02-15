@@ -877,7 +877,7 @@
     position : fixed;
     bottom : 60px;
     right: 35px;
-    /* display: none; */
+    display: none;
 }
 
 .gotop a {
