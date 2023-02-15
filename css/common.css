@@ -885,6 +885,7 @@
     bottom : 60px;
     right: 35px;
     display: none;
+    z-index: 9999998;
 }
 
 .gotop a {
