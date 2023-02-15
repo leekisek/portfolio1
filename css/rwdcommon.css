@@ -13,7 +13,7 @@
         padding: 25px 20px;
     }
 
-      .header .topbar_bg .topbar .navbar {
+    .header .topbar_bg .topbar .navbar {
 
         position: fixed;
         top: 0;
@@ -26,8 +26,8 @@
         z-index: 9998;
         /* display: none; */
         overflow-y: auto;
-        transition : all 0.65s;
-      }
+        transition: all 0.65s;
+    }
 
     /* .header .topbar_bg .topbar .depth1 {
         position: fixed;
@@ -40,14 +40,15 @@
         width: 40%;
         z-index: 9998;
         /* display: none; */
-        /* transition : all 0.6s; */
-    
+    /* transition : all 0.6s; */
+
 
     /* .header.on .tobar_bg .tobar .navbar {
         right: 0;
     } */
     header.on .topbar_bg .topbar .navbar {
-        right: 0; }
+        right: 0;
+    }
 
     /* .header.on .topbar_bg .topbar .depth1 {
         right: 0;
@@ -117,7 +118,7 @@
     .article3 .row {
         padding: 0 15px;
         text-align: center;
-        position :relative;
+        position: relative;
     }
 
     /* .article3 .roomtxt {
@@ -160,7 +161,7 @@
         padding: 20px;
     }
 
-    
+
     .article3 .slick-dots {
         position: absolute;
         bottom: 50px;
@@ -185,7 +186,7 @@
         font-size: 35px;
 
     }
-    
+
 
     .header .topbar_bg .topbar .bars {
         display: block;
@@ -258,21 +259,17 @@
         margin-bottom: 10px;
     }
 
-
-
-    }
-
     .article3 .slick-dots {
-        bottom : 15px;
+        bottom: 15px;
 
 
     }
 
     .article3 .vmor2 {
-        display: block;       
+        display: block;
         /* top:40%; */
         /* margin-left: 230px;
-        margin-bottom: 20px; */
+            margin-bottom: 20px; */
         width: 120px;
         height: 40px;
         /* z-index:9; */
@@ -282,7 +279,7 @@
         display: inline-block;
         padding-bottom: 15px;
         font-size: 16px;
-        right : 0;
+        right: 0;
     }
 
     .article3 .roomtxt .slidebtn a {
@@ -291,26 +288,44 @@
         height: 2px;
     }
 
-    
-.article3 .imgbox2 {
-    float: right;
-    width: 100%;
-    padding-top: 20px;
-    padding-left: 10px;
-    /* z-index: -9; */
-}
+
+    .article3 .imgbox2 {
+        float: right;
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 10px;
+        /* z-index: -9; */
+    }
+
     /* footer 구역 */
 
     .footer .row .bnav {
 
-        font-size: 15px;
+        font-size: 12px;
     }
 
-    .footer .last div {
-        float: none;
+    .footer .last {
         width: 100%;
-        padding: 20px 0;
-        font-size: 0.8rem;
+    }
+
+    .footer .last .loimg {
+        padding: 10px 0;
+        float: none;
+        margin: 0 auto;
+
+    }
+
+    .footer .last .ltxt {
+        padding: 10px 0;
+        float: none;
+        margin: 0 auto;
+
+    }
+
+    .footer .last .sns {
+        width : 100%;
+        float: none;
+        margin: 0 auto;
     }
 
     .footer .last .loimg img {
@@ -324,13 +339,16 @@
     }
 
 
+}
+
+
 
 
 
 
 @media screen and (max-width : 480px) {
 
-    
+
     .header .topbar_bg .topbar .depth1>li {
         font-size: 13px;
     }
@@ -368,10 +386,10 @@
     /* article1 구역 */
 
     .section .article1 a {
- 
+
         line-height: 25px;
         font-size: 12px;
-    
+
     }
 
 
@@ -388,16 +406,16 @@
     .article2 .imgbox .vmore {
 
         width: 100px;
-        height : 35px;
+        height: 35px;
         font-size: 12px;
     }
 
     .article2 .imgbox .vmore>a {
         display: block;
         padding: 13px 0;
-    
+
     }
-    
+
 
     /* article3 구역 */
 
@@ -424,8 +442,8 @@
     }
 
     .article3 .slick-dots {
-        position : absolute;
-        bottoM : 2px;
+        position: absolute;
+        bottoM: 2px;
     }
 
     .article3 .vmor2 {
@@ -441,7 +459,7 @@
         display: inline-block;
         padding-top: 0;
         font-size: 13px;
-        right : 0;
+        right: 0;
     }
 
     .article3 .roomtxt .slidebtn a {
@@ -450,14 +468,14 @@
         height: 2px;
     }
 
-    
-.article3 .imgbox2 {
-    float: right;
-    width: 100%;
-    padding-top: 20px;
-    padding-left: 10px;
-    /* z-index: -9; */
-}
+
+    .article3 .imgbox2 {
+        float: right;
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 10px;
+        /* z-index: -9; */
+    }
 
     /* article4 구역 */
 
@@ -465,12 +483,12 @@
         font-size: 1.5rem;
         padding: 90px 0;
         color: white;
-    
+
     }
 
     .article4 .imgbox3 .serv {
         line-height: 15px;
-        font-size : 11px;
+        font-size: 11px;
     }
 
     .article4 .imgbox3 .serv img {
@@ -484,15 +502,15 @@
 
         font-size: 11px;
     }
-
-    .footer .last div {
-        float: none;
-        width: 100%;
-        padding: 10px 0;
-        font-size: 0.5rem;
-    }
-
+    
     .footer .row .bnav li {
-        padding : 15px 10px;
+        padding: 15px 10px;
     }
+
+    .footer .last .sns img {
+        width: 20px;
+        height : 20px; 
+     
+    }
+
 }
