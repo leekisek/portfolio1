@@ -346,3 +346,22 @@ $('body').on('click','.modal button', function(){
 // $('body').on('click', '.modal img', function(e){
 //     e.stopPropagation()
 // })
+
+
+// gotop 구역 --------------------------------
+
+$(window).on('scroll', function(){
+    let sct = $(this).scrollTop()
+    if (sct > 100) {
+        $('.gotop').fadeIn(400)
+    } else {
+        $('.gotop').fadeOut(400)
+    }
+})
+
+$('.gotop').on('click', function(){
+    $('html').animate({
+        scrollTop : '0'
+    }, 600)
+    return false
+})
